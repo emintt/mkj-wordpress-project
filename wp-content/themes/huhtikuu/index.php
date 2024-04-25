@@ -7,10 +7,10 @@
       </div>
       <img src="<?php echo get_stylesheet_directory_uri() . '/images/map.svg' ?>" alt="Hero">
     </section>
-  </header>
+
   <main>
     <section class="products">
-      <h2>Featured Products</h2>
+      <h2 class="text-primary">Featured Products</h2>
       <article class="product">
         <img src="//placehold.it/200x200?text=Product" alt="Product">
         <h3>Product 1</h3>
