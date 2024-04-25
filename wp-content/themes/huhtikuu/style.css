@@ -25,10 +25,14 @@ Text Domain: huhtikuu-theme
     background-color: #f4f4f4;
 }
 
+
 body {
+    font-family: 'Noto Sans', system-ui, sans-serif;
     margin: 0;
     padding: 0;
 }
+
+
 
 main {
     width: 100%;
@@ -58,7 +62,7 @@ footer {
     margin-top: 2rem;
     text-align: center;
     width: 100%;
-    background-image: url('wave2.svg');
+    background-image: url('images/wave2.svg');
     background-repeat: no-repeat;
     background-size: cover;
 }

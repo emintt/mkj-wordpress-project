@@ -5,7 +5,7 @@
         <h1>Welcome to our website</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quos.</p>
       </div>
-      <img src="/images/map.svg" alt="Hero">
+      <img src="<?php echo get_stylesheet_directory_uri() . '/images/map.svg' ?>" alt="Hero">
     </section>
   </header>
   <main>
