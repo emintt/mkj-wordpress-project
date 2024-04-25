@@ -8,3 +8,6 @@ function huhtikuu_style_setup(): void {
 
 // add function to action, assigning to hook
 add_action(hook_name: 'wp_enqueue_scripts', callback: 'huhtikuu_style_setup');
+
+// add nav menus
+register_nav_menu( 'main-menu', __( 'Main Menu' ) );

@@ -13,11 +13,5 @@
             <img src="<?php echo get_stylesheet_directory_uri() . '/images/finland-coca-cola-logo_black_600x96.webp' ?>" alt="Logo">
         </div>
         <div class="header-top-right">
-            <nav>
-                <ul>
-                    <li><a href="#">Brändit</a></li>
-                    <li><a href="#">Tutustuu</a></li>
-                    <li><a href="#">Vastuullisuus us</a></li>
-                </ul>
-            </nav>
+             <?php wp_nav_menu( [ 'container' => 'nav', 'theme_location' => 'main-menu', 'depth' => 2 ] ) ?>
         </div>
