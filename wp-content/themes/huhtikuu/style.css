@@ -32,27 +32,44 @@ body {
     padding: 0;
 }
 
-
-
 main {
     width: 100%;
 }
 
-aside {
-    width: 100%;
-    padding: 2rem;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    box-shadow: inset 0 0 5px #9f9f9f, 0 0 5px #9f9f9f;
-    border-radius: 6px;
+/*  Navbar */
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
 }
 
-aside a {
-    color: #fff;
-    text-decoration: none;
-    display: block;
-    margin-bottom: 1rem;
+.navbar-light .navbar-toggler {
+    border-color: transparent;
+}
+
+.navbar-brand, .nav-link, .dropdown-menu {
+    color: #000000;
+    font-weight: 700;
+    font-size: 0.875em;
+}
+
+/*color of menu text*/
+.navbar-light .navbar-nav .nav-link {
+    color: #000000;
+}
+
+/*color of menu text when active*/
+.navbar-light .navbar-nav .active>.nav-link {
+    color: #000000;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url('images/menu.svg');
+}
+
+.dropdown-menu.show {
+    border: none;
 }
 
 footer {
@@ -67,48 +84,6 @@ footer {
     background-size: cover;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.page-header {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 1rem;
-    justify-content: space-between;
-    background-image: url('wave.svg');
-    background-repeat: no-repeat;
-}
-
-.header-top-left,
-.header-top-right {
-    text-align: center;
-    margin-bottom: 2rem;
-    width: 100%;
-}
-
-.page-header nav ul {
-    display: flex;
-    list-style: none;
-    padding: 0 1rem 0 0;
-    margin: 0;
-    width: 100%;
-    justify-content: space-around;
-}
-
-.page-header nav ul li a {
-    color: #f4f4f4;
-    text-decoration: none;
-    padding: 1rem;
-    background-color: #111111;
-    white-space: nowrap;
-    margin-left: 0.5rem;
-    border-radius: 6px;
-}
 
 .hero {
     position: relative;
@@ -163,14 +138,6 @@ footer {
         width: 25%;
         margin-top: 4.7rem;
         margin-bottom: 2rem;
-    }
-
-    .header-top-left,
-    .header-top-right {
-        display: flex;
-        align-items: center;
-        margin-bottom: 2rem;
-        width: auto;
     }
 
     .hero {
