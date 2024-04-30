@@ -48,10 +48,10 @@ main {
     border-color: transparent;
 }
 
-.navbar-brand, .nav-link, .dropdown-menu {
+.navbar-brand, .menu-item .nav-link, .dropdown-menu {
     color: #000000;
     font-weight: 700;
-    font-size: 0.875em;
+    font-size: 1.25em;
 }
 
 /*color of menu text*/
@@ -72,6 +72,16 @@ main {
     border: none;
 }
 
+/* large size */
+@media (min-width: 992px) {
+    .navbar-brand,  .menu-item  .nav-link, .dropdown-menu {
+        font-size: 0.875em;
+    }
+
+}
+
+/* End of Navbar */
+
 footer {
     background-color: #333;
     color: #fff;
@@ -85,6 +95,7 @@ footer {
 }
 
 
+/* Hero */
 .hero {
     position: relative;
     width: 100%;
@@ -105,6 +116,8 @@ footer {
     height: 100%;
     object-fit: cover;
 }
+
+/* End of hero */
 
 .products h2 {
     width: 100%;
