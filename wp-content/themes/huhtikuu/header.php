@@ -14,7 +14,8 @@
 
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <a class="navbar-brand" href=" <?php echo home_url(); ?>">
-                        <img src="<?php echo get_stylesheet_directory_uri() . '/images/finland-coca-cola-logo_black_600x96.png' ?>" alt="Logo" width="150px">
+                      <?php the_custom_logo(); ?>
+<!--                        <img src="--><?php //echo get_stylesheet_directory_uri() . '/images/finland-coca-cola-logo_black_600x96.png' ?><!--" alt="Logo" width="150px">-->
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNav" aria-controls="myNav" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'your-theme-slug' ); ?>">
                         <span class="navbar-toggler-icon"></span>

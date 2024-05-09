@@ -19,6 +19,31 @@ function huhtikuu_script_setup(): void {
 }
 add_action('wp_enqueue_scripts', 'huhtikuu_script_setup');
 
+function theme_setup(): void {
+  // näkee title tag
+  add_theme_support( 'title-tag' );
+  add_theme_support( 'post-thumbnails' );
+  add_theme_support( 'custom-logo', [
+    'height'      => 24,
+    'width'       => 150,
+    'flex-height' => true,
+    'flex-width' => true,
+  ] );
+
+
+  add_theme_support( 'custom-header' );
+
+
+  // Set the default Post Thumbnail size
+  set_post_thumbnail_size( 200, 200, true ); // 200px wide by 200px high, hard crop mode
+
+  // Add custom image sizes
+  add_image_size( 'custom-header', 1200, 400, true ); // Custom header size
+
+}
+
+add_action( 'after_setup_theme', 'theme_setup' );
+
 // add nav menus
 register_nav_menu( 'main-menu', __( 'Main Menu' ) );
 register_nav_menu( 'footer-menu', __( 'Footer Menu' ) );

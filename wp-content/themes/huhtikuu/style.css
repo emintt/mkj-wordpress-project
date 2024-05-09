@@ -30,6 +30,7 @@ body {
     font-family: 'Noto Sans', system-ui, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #eeeeee;
 }
 
 main {
@@ -52,6 +53,12 @@ main {
     color: #000000;
     font-weight: 700;
     font-size: 1.25em;
+}
+
+.custom-logo-link img {
+    width: 150px !important;
+    height: 24px !important;
+    object-fit: cover;
 }
 
 /*color of menu text*/
@@ -98,43 +105,75 @@ footer {
 /* Hero */
 .hero {
     position: relative;
+    justify-content: flex-start;
     width: 100%;
-    height: 20rem;
+    height: 100vh;
+    display: flex;
+    max-width: 1440px;
+    margin: auto;
 }
 
 .hero-text {
+
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 0%;
+    transform: translate(0%, -50%);
     color: #f4f4f4;
-    text-align: center;
+    margin-left: 2em;
+}
+
+.hero-heading {
+    font-size: 1.5em;
 }
 
 .hero img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
 
+}
+/* large size */
+@media (min-width: 992px) {
+    .hero-text {
+
+        position: absolute;
+        top: 50%;
+        left: 0%;
+        transform: translate(0%, -50%);
+        margin-left: 4em;
+    }
+
+    .hero-heading {
+        font-size: 2.5rem;
+    }
+}
 /* End of hero */
+
+/* Feature products */
 
 .products h2 {
     width: 100%;
+    padding: 2em;
+    text-align: center;
+    color: #111111;
+    font-weight: 700;
 }
 
 .products {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .product {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 1rem;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2);
     background-color: #fff;
-    margin-bottom: 2rem;
     border-radius: 6px;
+    width: 40em;
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-bottom: 4em;
 }
 
 .product img {
@@ -142,23 +181,129 @@ footer {
     object-fit: cover;
 }
 
-@media (min-width: 768px) {
-    main {
-        width: 75%;
+.product-text {
+    padding: 2em;
+}
+
+.product-link {
+    color: #111111;
+}
+
+.product .product-link:hover {
+    color: #575050FF;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+@media (min-width: 1200px) {
+    .product {
+        width: 30em;
     }
 
-    aside {
-        width: 25%;
-        margin-top: 4.7rem;
-        margin-bottom: 2rem;
+    .products h2 {
+        padding: 4em;
     }
+}
+
+@media (min-width: 768px) {
 
     .hero {
         height: auto;
     }
 
-    .product {
-        flex: 0 0 calc(33.333% - 2rem);
-        margin-right: 2rem;
-    }
 }
+
+/* Media */
+.media {
+    display: flex;
+    background-color: #ddd;
+    flex-direction: column;
+    padding-bottom: 5em;
+    align-items: stretch;
+}
+
+.media-content {
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2em;
+    box-sizing: border-box;
+    background-color: #fff;
+    z-index: 10;
+    margin-left: 4em;
+    margin-right: 4em;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+}
+
+.medias h2 {
+    width: 100%;
+    font-size: 2em;
+    font-weight: 700;
+    text-align: center;
+    padding: 2em;
+}
+
+
+.media-content h3 {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.media-paragraph {
+    margin-bottom: 2em;
+}
+
+.media-btn {
+    width: 15em;
+    padding: .5em .3em;
+    font-size: 0.875em;
+    background-color: transparent;
+    border: .1em solid #111111;
+    border-radius: 2em;
+    outline: none;
+    cursor: pointer;
+}
+
+.media-btn:hover  {
+    background-color: #acaeaf;
+}
+
+.media-image {
+    flex: 1 1;
+    margin-top: -4em;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+}
+
+.image {
+    /*width: 32em;*/
+    width: 100%;
+    object-fit: cover;
+}
+@media screen and (min-width: 1200px) {
+    .media {
+        flex-direction: row-reverse;
+    }
+    .medias h2 {
+        padding: 4em;
+    }
+
+    .media-content {
+        margin: 0;
+    }
+    .media-paragraph {
+        margin-bottom: 5em;
+    }
+    .media-image {
+        margin-top: 0;
+    }
+
+}
+
+
+
+
+
+
