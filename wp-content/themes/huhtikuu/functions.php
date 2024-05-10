@@ -35,7 +35,7 @@ function theme_setup(): void {
 
 
   // Set the default Post Thumbnail size
-  set_post_thumbnail_size( 200, 200, true ); // 200px wide by 200px high, hard crop mode
+  set_post_thumbnail_size( 400, 400, true ); // 400px wide by 400px high, hard crop mode
 
   // Add custom image sizes
   add_image_size( 'custom-header', 1200, 400, true ); // Custom header size
@@ -47,4 +47,8 @@ add_action( 'after_setup_theme', 'theme_setup' );
 // add nav menus
 register_nav_menu( 'main-menu', __( 'Main Menu' ) );
 register_nav_menu( 'footer-menu', __( 'Footer Menu' ) );
+
+
+// custom functions
+require_once( __DIR__ . '/inc/article-function.php' );
 

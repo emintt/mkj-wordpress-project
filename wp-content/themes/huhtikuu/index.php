@@ -1,47 +1,46 @@
 <?php get_header(); ?>
 
 <section class="hero">
-    <div class=" hero-text">
-        <h1 class="hero-heading">Real magic summer</h1>
-        <p class="hero-paragraph">Lorem ipsum dolor sit amet. </p>
-        <button class="hero-btn">Lue lisää</button>
-    </div>
-    <?php the_custom_header_markup(); ?>
+
+  <?php
+  if (have_posts()) :
+    while (have_posts()) : the_post();
+      ?>
+      <?php if (is_front_page()) : ?>
+            <div class=" hero-text">
+                <div class="hero-paragraph">
+                  <?php the_content(); ?>
+                </div>
+            </div>
+      <?php endif; ?>
+
+    <?php
+    endwhile;
+  else :
+    _e('Sorry, no posts matched your criteria.', 'huhtikuu');
+  endif;
+  ?>
+
+  <?php the_custom_header_markup(); ?>
 </section>
 
-<main class="container">
-    <section class="container">
-      <?php
-      if (have_posts()) :
-        while (have_posts()) : the_post();
-          ?>
-            <article>
-                <h2><?php the_title(); ?></h2>
-                <!--                <div class="meta-info">-->
-                <!--                    <p>Posted in --><?php //echo get_the_date(); ?><!-- by -->
-              <?php //the_author_posts_link(); ?><!--</p>-->
-                <!--                    <p>Categories: --><?php //the_category(' '); ?><!--</p>-->
-                <!--                    <p>Tags: --><?php //the_tags('', ', '); ?><!--</p>-->
-                <!--                </div>-->
-              <?php the_content(); ?>
-            </article>
-        <?php
-        endwhile;
-      else :
-        _e('Sorry, no posts matched your criteria.', 'huhtikuu');
-      endif;
-      ?>
+<main>
+    <section class="menus container">
+        <h2 class="text-center my-5">Meidän menu</h2>
+        <ul class="row text-center text-lg-start">
+
+            <li class="col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                <div class="image-wrapper">
+                    <img
+                        src="" alt="menu"
+                        class="img-fluid img-thumbnail mb-2" />
+                </div>
+                </a>
+            </li>
+        </ul>
     </section>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm">
-                One of three columns
-            </div>
-            <div class="col-sm">
-                One of three columns
-            </div>
-        </div>
-    </div>
+
     <section class="products">
         <h2 class="">Suosittuja juuri nyt</h2>
 

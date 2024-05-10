@@ -6,8 +6,8 @@
         content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <?php wp_head(); ?>
 </head>
-<body <?php body_class();?> >
-<div>
+<body class="body">
+
     <header class="page-header">
         <div>
             <nav class="navbar navbar-expand-lg navbar-light bg-white text-dark" role="navigation">
