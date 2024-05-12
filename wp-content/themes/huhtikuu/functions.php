@@ -13,8 +13,6 @@ function huhtikuu_style_setup(): void {
 add_action(hook_name: 'wp_enqueue_scripts', callback: 'huhtikuu_style_setup');
 
 function huhtikuu_script_setup(): void {
-  //wp_enqueue_script('bootstrap-jquery', "https://code.jquery.com/jquery-3.3.1.slim.min.js", [], '1.0', true);
- // wp_enqueue_script('bootstrap-popper', "https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js", [], '1.0', true);
   wp_enqueue_script('bootstrap-js', "https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js", ['jquery'], '4.3.1', true);
 }
 add_action('wp_enqueue_scripts', 'huhtikuu_script_setup');
@@ -36,10 +34,9 @@ function theme_setup(): void {
 
   // Set the default Post Thumbnail size
   set_post_thumbnail_size( 400, 400, true ); // 400px wide by 400px high, hard crop mode
-
   // Add custom image sizes
   add_image_size( 'custom-header', 1200, 400, true ); // Custom header size
-
+  add_image_size( 'category-thumb', 400, 400 , true);
 }
 
 add_action( 'after_setup_theme', 'theme_setup' );
@@ -51,4 +48,6 @@ register_nav_menu( 'footer-menu', __( 'Footer Menu' ) );
 
 // custom functions
 require_once( __DIR__ . '/inc/article-function.php' );
+require_once( __DIR__ . '/inc/post-function.php' );
+
 
