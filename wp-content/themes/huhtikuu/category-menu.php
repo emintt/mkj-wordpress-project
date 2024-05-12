@@ -43,25 +43,27 @@ get_header();
 
           ];
           $subcategories = get_categories($array);
-          echo "<div class='menu-nav-container'>";
-          foreach ( $subcategories as $subcategory ):
-          echo " <div class='menu-nav-main'>
-                  <ul class='menu-nav-items'>
-                      <li class='menu-nav-item'>
-                          <a href='salaatti'>
-                              <span>$subcategory->name</span>
-                          </a>
-                      </li>
-                  </ul>
-              </div>";
-          endforeach;
-          echo "</div>";
+
+//          echo "<div class='menu-nav-container'>";
+//          foreach ( $subcategories as $subcategory ):
+//          echo " <div class='menu-nav-main'>
+//                  <ul class='menu-nav-items'>
+//                      <li class='menu-nav-item'>";
+//          	                echo '<a href="#" class="menu-nav-button"  data-id="' . $subcategory->term_id . ' "' . '>' .
+//
+//                        "<span>$subcategory->name</span>
+//                          </a>
+//                      </li>
+//                  </ul>
+//              </div>";
+//          endforeach;
+//          echo "</div>";
 
 
           // loop through sub categories and display them
           foreach ( $subcategories as $subcategory ):
 
-            echo '<h2>' . $subcategory->name . '</h2>';
+            echo '<h2 class="products-heading">' . $subcategory->name . '</h2>';
 
             $args = [
               'post_type'      => 'post',

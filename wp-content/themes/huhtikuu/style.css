@@ -221,7 +221,7 @@ main {
     width: 40em;
     margin-left: 2em;
     margin-right: 2em;
-    margin-bottom: 14em;
+    margin-bottom: 5em;
 }
 
 .product img {
@@ -234,7 +234,7 @@ main {
 }
 
 .product-text {
-    padding: 1em;
+    padding: 2em 1em;
 }
 
 
@@ -403,7 +403,6 @@ footer {
     margin-top: 2rem;
     text-align: center;
     width: 100%;
-    background-image: url('images/wave2.svg');
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;

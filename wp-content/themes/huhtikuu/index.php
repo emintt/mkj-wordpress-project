@@ -54,22 +54,6 @@ get_header();
 
     </section>
 
-    <section class="menus container">
-        <h2 class="text-center my-5">Meidän menu</h2>
-        <ul class="row text-center text-lg-start">
-
-            <li class="col-md-4 col-6">
-                <a href="#" class="d-block mb-4 h-100">
-                    <div class="image-wrapper">
-                        <img
-                                src="" alt="menu"
-                                class="img-fluid img-thumbnail mb-2"/>
-                    </div>
-                </a>
-            </li>
-        </ul>
-    </section>
-
 
 </main>
 

@@ -50,4 +50,18 @@ register_nav_menu( 'footer-menu', __( 'Footer Menu' ) );
 require_once( __DIR__ . '/inc/article-function.php' );
 require_once( __DIR__ . '/inc/post-function.php' );
 
+function script_setup():void {
+  wp_enqueue_script('menu_posts', get_template_directory_uri() . '/js/singleMenuPosts.js',
+    [], '1.0', true);
+  $script_data = [
+    // ajaxin vakiona
+    'ajax_url' => admin_url('admin-ajax.php'),
+
+  ];
+  // tunniste wp_enqueue_script('single_post'), sen dataksi; 'singlePost'
+  wp_localize_script('menu_posts', 'menuPosts', $script_data);
+};
+
+add_action('wp_enqueue_scripts', 'script_setup');
+
 
